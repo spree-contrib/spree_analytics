@@ -1,0 +1,27 @@
+<% content_for :head do %>
+  <link type="text/css" rel="stylesheet" href="https://api.jirafe.com/dashboard/css/magento_ui.css" media="all" />
+  <script type="text/javascript" src="https://api.jirafe.com/dashboard/js/magento_ui.js"></script>
+<% end %>
+
+<div id="jirafe"></div>
+<script type="text/javascript">
+    <!--
+    if (typeof jQuery != 'undefined') { 
+        (function($) {
+         $('#jirafe').jirafe({
+            api_url:    '<%= SpreeAnalytics.api_url %>',
+            api_token:  '<%= SpreeAnalytics.token %>',
+            app_id:     '<%= SpreeAnalytics.app_id %>',
+            version:    'magento-v0.3.0'
+            });
+         })(jQuery);
+    }
+    -->
+    <!--
+    setTimeout(function() {
+            if ($('mod-jirafe') == undefined){
+            $('messages').insert ("<ul class=\"messages\"><li class=\"error-msg\">We're unable to connect with the Jirafe service for the moment. Please wait a few minutes and refresh this page later.</li></ul>");        
+            }
+            }, 2000);
+    -->
+</script>
