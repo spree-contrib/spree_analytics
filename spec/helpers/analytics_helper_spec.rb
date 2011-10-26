@@ -10,7 +10,7 @@ describe AnalyticsHelper do
   it "includes jirafe configuration" do
     tags = helper.analytics_tags
     tags[:id].should be_kind_of String
-    tags[:id].should eq "1"
+    tags[:id].should eq "2"
   end
 
   describe "Tracking Tags Customizations" do

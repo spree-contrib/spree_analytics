@@ -26,6 +26,12 @@ end
 
 desc "Generates a dummy app for testing"
 task :test_app do
-  ENV['LIB_NAME'] = 'spree_analytics'
+
+  libname = 'spree_analytics'
+  def libname.classify
+    SpreeAnalytics
+  end
+
+  ENV['LIB_NAME'] = libname
   Rake::Task['common:test_app'].invoke
 end
