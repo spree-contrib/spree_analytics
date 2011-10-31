@@ -9,13 +9,17 @@ like trending products, revenue per customer, etc., can be easily compiled becau
 ## Installation
 1. add spree_analytics to your gemfile
 
-    gem 'spree_analytics', :git => "git@github.com:spree/spree_analytics.git"
+```ruby
+gem 'spree_analytics', :git => "git@github.com:spree/spree_analytics.git"
+```
 
 2. create an initializer file in config/initializers/spree_analytics.rb
 
-    SpreeAnalytics.app_id = <APP_ID>
-    SpreeAnalytics.site_id = <SITE_ID>
-    SpreeAnalytics.token = "<TOKEN>"
+```ruby
+SpreeAnalytics.app_id = <APP_ID>
+SpreeAnalytics.site_id = <SITE_ID>
+SpreeAnalytics.token = "<TOKEN>"
+```
 
 ## Testing
 
