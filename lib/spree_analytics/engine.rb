@@ -14,6 +14,10 @@ module SpreeAnalytics
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
+
+      ActionController::Base.class_eval do
+       helper AnalyticsHelper
+      end
     end
 
     config.to_prepare &method(:activate).to_proc
@@ -30,3 +34,4 @@ module SpreeAnalytics
   end
 
 end
+
