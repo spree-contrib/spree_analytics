@@ -1,5 +1,10 @@
 # defined on https://github.com/jirafe/php-client/wiki/Jirafe-Javascript-Tags
 module AnalyticsHelper
+
+  def spree_analytics
+    render :partial => 'analytics/header'
+  end
+
   def analytics_tags
     tags = { :id => SpreeAnalytics.site_id.to_s, :baseUrl => SpreeAnalytics.data_url }
     tags.merge! product_analytics_tags
