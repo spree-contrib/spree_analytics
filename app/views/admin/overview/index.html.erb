@@ -1,7 +1,9 @@
 <% content_for :head do %>
-  <link type="text/css" rel="stylesheet" href="https://s3.amazonaws.com/spree-analytics/css/spree_ui.css" media="all" />
-  <script type="text/javascript" src="https://s3.amazonaws.com/spree-analytics/js/spree_ui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://api.jirafe.com/dashboard/css/spree_ui.css" media="all" />
+  <script type="text/javascript" src="https://api.jirafe.com/dashboard/js/spree_ui.js"></script>
 <% end %>
+
+<h1><%= t(:overview) %></h1>
 
 <% if SpreeAnalytics.configured? %>
   <div id="jirafe"></div>
@@ -12,7 +14,7 @@
               api_url:    '<%= SpreeAnalytics.api_url %>',
               api_token:  '<%= SpreeAnalytics.token %>',
               app_id:     '<%= SpreeAnalytics.app_id %>',
-              version:    'magento-v0.3.0'
+              version:    'spree-v0.1.0'
               });
            })(jQuery);
       }
