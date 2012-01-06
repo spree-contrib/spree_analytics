@@ -4,7 +4,7 @@ describe "analytics/_header.html.erb" do
 
   before :each do
       view.stub(:title => "test",
-                :current_order => Order.new)
+                :current_order => Spree::Order.new)
   end
 
   describe "uninitalized" do
@@ -33,7 +33,7 @@ describe "analytics/_header.html.erb" do
     end
 
     it "includes product tags" do
-      assign(:product, Product.new(:name => 'Ruby Shirt'))
+      assign(:product, Spree::Product.new(:name => 'Ruby Shirt'))
       render
       rendered.should match /Ruby Shirt/
     end
