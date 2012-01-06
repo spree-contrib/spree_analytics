@@ -29,6 +29,6 @@ incorrect engine name. It should be SpreeAnalytics::Engine.*
 Be sure to add the rspec-rails gem to your Gemfile and then create a dummy test app for the specs to run against.
 
     $ bundle exec rake test_app
-    $ bundle exec rspec spec
+    $ bundle exec rake spec
 
 Copyright (c) 2011 Spree Commerce
