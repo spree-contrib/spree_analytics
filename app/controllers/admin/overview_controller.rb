@@ -1,8 +1,9 @@
 # overriden to avoid all the queries in the core OverviewController
-class Admin::OverviewController < Admin::BaseController
+module Spree
+  class Admin::OverviewController < Admin::BaseController
 
-  def index
+    def index
+    end
+
   end
-
 end
-
