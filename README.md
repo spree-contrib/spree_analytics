@@ -1,5 +1,7 @@
 # Spree Analytics
 
+**Spree Analytics were integrated into Spree in v1.0, you only need this extension if you are using an older version of Spree**
+
 Spree Extension for robust analytics tailored for ecommerce merchants.
 
 Provides a transparent view into your store performance so that you can make better-informed decisions to increase 
