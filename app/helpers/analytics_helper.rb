@@ -31,7 +31,7 @@ module AnalyticsHelper
 
   def keywords_analytics_tags
     return {} unless params[:keywords]
-    { :search => { :keyword => params[:keywords] } }
+    { :search => { :keyword => u(params[:keywords]) } }
   end
 
   def cart_analytics_tags

@@ -55,6 +55,13 @@ describe AnalyticsHelper do
       tags[:search][:keyword].should eq "rails"
     end
 
+    it "escapes keywords" do
+      params[:keywords] = "\"funny><looking><keywords"
+      tags = helper.keywords_analytics_tags
+      tags[:search][:keyword].should_not include("funny><looking><keywords")
+      tags[:search][:keyword].should include("%22funny%3E%3Clooking%3E%3Ckeywords")
+    end
+
     it "for cart" do
       @order.should_receive(:cart?).and_return(true)
       assign :order, @order
